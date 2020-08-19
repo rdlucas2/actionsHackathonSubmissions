@@ -39,4 +39,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BUILD_SCRIPT: yarn --version
         BUILD_DIR: mydocs/docs/.vuepress/dist/
+        TARGET_BRANCH: gh-pages
 
