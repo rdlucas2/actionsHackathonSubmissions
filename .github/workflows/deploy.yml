@@ -56,6 +56,9 @@ jobs:
         #fqdn: # optional
         # Allow Jekyll to build your site
         jekyll: false # optional, default is true
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
         
 #     - name: deploy vuepress
 #       uses: jenkey2011/vuepress-deploy@1.0.1
