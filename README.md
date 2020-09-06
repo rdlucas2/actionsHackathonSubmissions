@@ -30,7 +30,8 @@ None
 
 ## Example usage
 
-uses: rdlucas2/actionsHackathonSubmissions@v3
+uses: rdlucas2/actionsHackathonSubmissions@v0.0.1
+
 with:
   azure-sp-client-id: '${{ secrets.AZ_SP_CLIENTID }}'
   azure-sp-password: '${{ secrets.AZ_SP_PASSWORD }}'
