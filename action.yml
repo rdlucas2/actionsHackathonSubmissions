@@ -1,16 +1,32 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+
+name: 'Create Azure IoT Edge Device'
+description: 'Register a new Azure IoT Edge Device on an existing Hub'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  azure-sp-client-id:  # id of input
+    description: 'Azure Service Principal Client ID'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+    default: ${{ secrets.AZ_SP_CLIENTID }}
+  azure-sp-password:  # id of input
+    description: 'Azure Service Principal Password'
+    required: true
+    default: ${{ secrets.AZ_SP_PASSWORD }}
+  azure-tenant-id:  # id of input
+    description: 'Azure Tenant ID'
+    required: true
+    default: ${{ secrets.AZ_TENANT }}
+  azure-iot-device-id:  # id of input
+    description: 'Unique ID for a new Edge Device'
+    required: true
+  azure-iot-hub-name:  # id of input
+    description: 'Azure IoT Hub Name'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.azure-sp-client-id }}
+    - ${{ inputs.azure-sp-password }}
+    - ${{ inputs.azure-tenant-id }}
+    - ${{ inputs.azure-iot-device-id }}
+    - ${{ inputs.azure-iot-hub-name }}

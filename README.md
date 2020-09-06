@@ -1,21 +1,39 @@
-# Hello world docker action
+# Register Azure IoT Edge Device
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action Registers a new IoT Edge Device on a given Azure IoT Hub.
 
 ## Inputs
 
-### `who-to-greet`
+### `azure-sp-client-id`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** Azure Service Principal Client ID. Default `"${{ secrets.AZ_SP_CLIENTID }}"`.
+
+### `azure-sp-password`
+
+**Required** Azure Service Principal Password. Default `"${{ secrets.AZ_SP_PASSWORD }}"`.
+
+### `azure-tenant-id`
+
+**Required** Azure Tenant ID. Default `"${{ secrets.AZ_TENANT }}"`.
+
+### `azure-iot-device-id`
+
+**Required** Unique ID for a new Edge Device.
+
+### `azure-iot-hub-name`
+
+**Required** Azure IoT Hub Name.
 
 ## Outputs
 
-### `time`
-
-The time we greeted you.
+None
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
+uses: rdlucas2/actionsHackathonSubmissions@v3
 with:
-  who-to-greet: 'Mona the Octocat'
+  azure-sp-client-id: ${{ secrets.AZ_SP_CLIENTID }}
+  azure-sp-password: ${{ secrets.AZ_SP_PASSWORD }}
+  azure-tenant-id: ${{ secrets.AZ_TENANT }}
+  azure-iot-device-id: 'MyNewDevice1'
+  azure-iot-hub-name: 'MyExistinHubName'
