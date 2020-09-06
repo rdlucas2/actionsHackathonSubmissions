@@ -6,15 +6,15 @@ This action Registers a new IoT Edge Device on a given Azure IoT Hub.
 
 ### `azure-sp-client-id`
 
-**Required** Azure Service Principal Client ID. Default `"${{ secrets.AZ_SP_CLIENTID }}"`.
+**Required** Azure Service Principal Client ID.
 
 ### `azure-sp-password`
 
-**Required** Azure Service Principal Password. Default `"${{ secrets.AZ_SP_PASSWORD }}"`.
+**Required** Azure Service Principal Password.
 
 ### `azure-tenant-id`
 
-**Required** Azure Tenant ID. Default `"${{ secrets.AZ_TENANT }}"`.
+**Required** Azure Tenant ID.
 
 ### `azure-iot-device-id`
 
@@ -32,8 +32,8 @@ None
 
 uses: rdlucas2/actionsHackathonSubmissions@v3
 with:
-  azure-sp-client-id: ${{ secrets.AZ_SP_CLIENTID }}
-  azure-sp-password: ${{ secrets.AZ_SP_PASSWORD }}
-  azure-tenant-id: ${{ secrets.AZ_TENANT }}
+  azure-sp-client-id: '${{ secrets.AZ_SP_CLIENTID }}'
+  azure-sp-password: '${{ secrets.AZ_SP_PASSWORD }}'
+  azure-tenant-id: '${{ secrets.AZ_TENANT }}'
   azure-iot-device-id: 'MyNewDevice1'
-  azure-iot-hub-name: 'MyExistinHubName'
+  azure-iot-hub-name: 'MyExistingHubName'
