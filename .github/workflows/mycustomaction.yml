@@ -5,9 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to register an IoT Edge Device on Azure IoT Hub
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Register step
       id: register
-      uses: rdlucas2/actionsHackathonSubmissions@v0.0.4
+      uses: rdlucas2/actionsHackathonSubmissions@v0.0.5
       with:
         azure-sp-client-id: '${{ secrets.AZ_SP_CLIENTID }}'
         azure-sp-password: '${{ secrets.AZ_SP_PASSWORD }}'

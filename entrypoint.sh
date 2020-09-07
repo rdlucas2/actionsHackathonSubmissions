@@ -18,9 +18,12 @@ az extension add --name azure-iot
 
 az login --service-principal -u ${AZ_USERNAME} -p ${AZ_PASSWORD} --tenant ${AZ_TENANT}
 #az account show
-ls
+search_dir=$(pwd)
 
-pwd
+for entry in "$search_dir"/*
+do
+  echo "$entry"
+done
 
 echo ${DEVICE_LIST_FILE_PATH}
 
