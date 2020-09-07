@@ -16,6 +16,8 @@ AZ_HUB_NAME=$5
 az login --service-principal -u ${AZ_USERNAME} -p ${AZ_PASSWORD} --tenant ${AZ_TENANT}
 #az account show
 
+az extension list
+
 #create a new device
 az iot hub device-identity create --device-id ${AZ_DEVICE_ID} --hub-name ${AZ_HUB_NAME} --edge-enabled
 
