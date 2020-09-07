@@ -28,5 +28,6 @@ runs:
     - ${{ inputs.azure-sp-client-id }}
     - ${{ inputs.azure-sp-password }}
     - ${{ inputs.azure-tenant-id }}
-    - ${{ inputs.azure-iot-device-id }}
+    #- ${{ inputs.azure-iot-device-id }}
     - ${{ inputs.azure-iot-hub-name }}
+    - ${{ inputs.device-list-file-path }}
