@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Register step
       id: register
-      uses: rdlucas2/actionsHackathonSubmissions@v0.0.1
+      uses: rdlucas2/actionsHackathonSubmissions@v0.0.2
       with:
         azure-sp-client-id: '${{ secrets.AZ_SP_CLIENTID }}'
         azure-sp-password: '${{ secrets.AZ_SP_PASSWORD }}'
