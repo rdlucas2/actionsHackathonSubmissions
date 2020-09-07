@@ -12,11 +12,14 @@ inputs:
   azure-tenant-id:  # id of input
     description: 'Azure Tenant ID'
     required: true
-  azure-iot-device-id:  # id of input
-    description: 'Unique ID for a new Edge Device'
-    required: true
+  # azure-iot-device-id:  # id of input
+  #   description: 'Unique ID for a new Edge Device'
+  #   required: true
   azure-iot-hub-name:  # id of input
     description: 'Azure IoT Hub Name'
+    required: true
+  device-list-file-path: # id of input
+    description: 'Path to file with desired device names'
     required: true
 runs:
   using: 'docker'

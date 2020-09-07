@@ -16,13 +16,13 @@ This action Registers a new IoT Edge Device on a given Azure IoT Hub.
 
 **Required** Azure Tenant ID.
 
-### `azure-iot-device-id`
-
-**Required** Unique ID for a new Edge Device.
-
 ### `azure-iot-hub-name`
 
 **Required** Azure IoT Hub Name.
+
+### `device-list-file-path`
+
+**Required** Device List File Path.
 
 ## Outputs
 
@@ -36,5 +36,5 @@ with:
   azure-sp-client-id: '${{ secrets.AZ_SP_CLIENTID }}'
   azure-sp-password: '${{ secrets.AZ_SP_PASSWORD }}'
   azure-tenant-id: '${{ secrets.AZ_TENANT }}'
-  azure-iot-device-id: 'MyNewDevice1'
   azure-iot-hub-name: 'MyExistingHubName'
+  device-list-file-path: '/devices/list.txt'

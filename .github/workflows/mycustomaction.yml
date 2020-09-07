@@ -12,5 +12,6 @@ jobs:
         azure-sp-client-id: '${{ secrets.AZ_SP_CLIENTID }}'
         azure-sp-password: '${{ secrets.AZ_SP_PASSWORD }}'
         azure-tenant-id: '${{ secrets.AZ_TENANT }}'
-        azure-iot-device-id: 'MyNewDevice2'
+        #azure-iot-device-id: 'MyNewDevice2'
         azure-iot-hub-name: '${{ secrets.AZ_IOT_HUB_NAME }}'
+        device-list-file-path: '/devices/list.txt'

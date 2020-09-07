@@ -1,0 +1,3 @@
+myDeviceId1
+myDeviceId2
+myDeviceId3

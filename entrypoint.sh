@@ -5,11 +5,12 @@ AZ_PASSWORD=$2
 AZ_TENANT=$3
 AZ_DEVICE_ID=$4
 AZ_HUB_NAME=$5
+DEVICE_LIST_FILE_PATH=$6
 
-#AZ_RG_NAME=$6
-#VM_ADMIN_USER=$7
-#VM_ADMIN_PASSWORD=$8
-#VM_NAME=$9
+#AZ_RG_NAME=$7
+#VM_ADMIN_USER=$8
+#VM_ADMIN_PASSWORD=$9
+#VM_NAME=$10
 
 #az --version
 
@@ -17,7 +18,16 @@ az extension add --name azure-iot
 
 az login --service-principal -u ${AZ_USERNAME} -p ${AZ_PASSWORD} --tenant ${AZ_TENANT}
 #az account show
+ls
 
+pwd
+
+echo ${DEVICE_LIST_FILE_PATH}
+
+while read -r line; 
+do 
+    echo $line; 
+done < ${DEVICE_LIST_FILE_PATH}
 
 #create a new device
 az iot hub device-identity create --device-id ${AZ_DEVICE_ID} --hub-name ${AZ_HUB_NAME} --edge-enabled
