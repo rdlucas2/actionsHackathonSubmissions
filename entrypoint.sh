@@ -26,8 +26,9 @@ az login --service-principal -u ${AZ_USERNAME} -p ${AZ_PASSWORD} --tenant ${AZ_T
 #done
 
 cat ${DEVICE_LIST_FILE_PATH}
+echo " "
 
-while IFS= read -r line; 
+while IFS= read -r line || [ -n "$line" ]; 
 do 
     echo $line;
     az iot hub device-identity create --device-id ${line} --hub-name ${AZ_HUB_NAME} --edge-enabled
