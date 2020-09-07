@@ -9,11 +9,11 @@ jobs:
       uses: actions/checkout@v2
     - name: Register step
       id: register
-      uses: rdlucas2/actionsHackathonSubmissions@v0.0.5
+      uses: rdlucas2/actionsHackathonSubmissions@v0.0.6
       with:
         azure-sp-client-id: '${{ secrets.AZ_SP_CLIENTID }}'
         azure-sp-password: '${{ secrets.AZ_SP_PASSWORD }}'
         azure-tenant-id: '${{ secrets.AZ_TENANT }}'
         #azure-iot-device-id: 'MyNewDevice2'
         azure-iot-hub-name: '${{ secrets.AZ_IOT_HUB_NAME }}'
-        device-list-file-path: '/devices/list.txt'
+        device-list-file-path: '/github/workspace/devices/list.txt'
