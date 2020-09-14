@@ -30,6 +30,7 @@ None
 
 ## Example usage
 
+```
 uses: rdlucas2/actionsHackathonSubmissions@v0.0.1
 
 with:
@@ -38,3 +39,4 @@ with:
   azure-tenant-id: '${{ secrets.AZ_TENANT }}'
   azure-iot-hub-name: 'MyExistingHubName'
   device-list-file-path: '/devices/list.txt'
+```
